@@ -15,10 +15,12 @@
 	{
 	$token = md5($_POST['email']).rand(10,9999);
 	mysqli_query($conn,"INSERT INTO users(username,email,password,email_verification_link,gender) VALUES( '". $_POST['username'] . "','".$_POST['email']."','".md5($_POST['password'])."','". $token . "','" . $_POST['sex'] ."')");
-	$link = "<a href='localhost/html/verify-email.php?key=".$_POST['email']."&token=".$token."'>Click and Verify Email </a>";
-	require($_SERVER["DOCUMENT_ROOT"]."/PHPMailer/src/PHPMailer.php");
-	require($_SERVER["DOCUMENT_ROOT"]."/PHPMailer/src/Exception.php"); 
-	require($_SERVER["DOCUMENT_ROOT"]."/PHPMailer/src/SMTP.php");
+	
+	//change link to your directory where verify-email.php is stored. 
+	$link = "<a href='fill?key=".$_POST['email']."&token=".$token."'>Click and Verify Email </a>";
+	require("./PHPMailer/src/PHPMailer.php");
+	require("./PHPMailer/src/Exception.php"); 
+	require("./PHPMailer/src/SMTP.php");
 
 	//Create new instance passing true enables exceptions 
 	$mail = new PHPMailer(true);
@@ -29,14 +31,14 @@
 	$mail->Host = 'smtp.gmail.com';
 	$mail->SMTPAuth = true; 
 	//Login Details 
-	$mail->Username = "Enter a email";
-	$mail->Password = "Enter a password";
+	$mail->Username = "enter email";
+	$mail->Password = "enter password";
 	
 	$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; 
 	$mail->Port = "465"; 
 	
 	 
-	$mail->setFrom('enter email', 'enterName');  
+	$mail->setFrom('enter email', 'enter name');  
 	$mail->AddAddress($_POST['email'],$_POST['username']); 
 	$mail->Subject = 'Activate Account'; 
 	$mail->IsHTML(true); 
