@@ -1,5 +1,6 @@
 # EmailVerificationwPHP
 Shows how email verification works with PHP,SQL,HTML. 
+<h1 style="background-color:yellow;"> TO USE GOOGLE YOU MUST TURN OFF A SECURITY OPTION IN GMAIL </h1>
 <h1> YOU NEED TO FOLLOW THESE STEPS </h1> 
 <h2><u>REQUIREMENTS</u></h2> 
 <ul>
