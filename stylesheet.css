@@ -1,0 +1,43 @@
+#emailFormContainer{
+	width:fit-content;
+	border:solid black 2px;
+	background-color:#cccccc;
+	padding:5px;
+} 
+#emailFormContainer h1{
+	background-color:#aaaaaa;
+	border-radius:25px;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin-top:5px;
+	margin-bottom:15px;
+	border:solid black 2px;
+} 
+
+#emailFormContainer table tr td{
+	display:block;
+	margin-left:5px;
+} 
+
+#emailFormContainer table{
+	border-spacing:0 10px;
+}	
+
+#emailFormContainer table tr th{
+	font-size:20px;
+	text-align:right;
+}
+#emailFormContainer td input{
+	font-size:20px;
+	width:70%;
+} 
+#emailFormContainer th{
+	align:center;
+}
+
+#signUpButton{
+	display:block;
+	font-size:20px;
+	border-radius:25px;
+	margin:auto;
+} 

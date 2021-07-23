@@ -1,0 +1,1 @@
+CREATE TABLE users(id int(11) NOT NULL AUTO_INCREMENT,email VARCHAR(30) NOT NULL UNIQUE,username varchar(30) UNIQUE NOT NULL,password varchar(30) NOT NULL,gender varchar(1) NOT NULL,email_verification_link varchar(255) NOT NULL,email_verified_at TIMESTAMP NULL, PRIMARY KEY(id));
